@@ -8,7 +8,8 @@ import cardimg1 from '../../assets/img/icon-brand-recognition.svg'
 import cardimg2 from '../../assets/img/icon-detailed-records.svg'
 import cardimg3 from '../../assets/img/icon-fully-customizable.svg'
 import hero from '../../assets/img/illustration-working.svg'
-import './page.scss'
+import './page.scss';
+
 
 export default function Page() {
     return (
@@ -21,20 +22,24 @@ export default function Page() {
 
                 <nav>
                     <ul>
-                        <a href="#">Features</a>
-                        <a href="#">Pricing</a>
-                        <a href="#">Resources</a>
+                        <div className="header-nav__links">
+                            <a href="#">Features</a>
+                            <a href="#">Pricing</a>
+                            <a href="#">Resources</a>
+                        </div>
                         <hr />
                         <div className="login__links">
                             <a href="#">Login</a>
-                            <a href="#">Sign Up</a>
+                            <a href="#" className="signup">Sign Up</a>
                         </div>
                     </ul>
                 </nav>
             </header>
 
             <section className="hero__section">
-                <img src={hero} alt=""/>
+                <div className="hero__img">
+                    <img src={hero} alt=""/>
+                </div>
                 <div className="hero__info u-wrapper">
                     <h1>More than just shorter links</h1>
                     <p>Build your brand's recognition and get detailed insights on how your links are performing</p>
@@ -50,26 +55,28 @@ export default function Page() {
                 <div className="u-wrapper">
                 <h2>Advanced Statistics</h2>
                 <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
-                <div className="card">
-                    <div className="card__img">
-                        <img src={cardimg1} alt=""/>
+                <div className="cards__container">
+                    <div className="card">
+                        <div className="card__img">
+                            <img src={cardimg1} alt=""/>
+                        </div>
+                        <h3>Brand Recognition</h3>
+                        <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content.</p>
                     </div>
-                    <h3>Brand Recognition</h3>
-                    <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content.</p>
-                </div>
-                <div className="card">
-                    <div className="card__img">
-                        <img src={cardimg2} alt=""/>
+                    <div className="card">
+                        <div className="card__img">
+                            <img src={cardimg2} alt=""/>
+                        </div>
+                        <h3>Detailed Records</h3>
+                        <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
                     </div>
-                    <h3>Detailed Records</h3>
-                    <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
-                </div>
-                <div className="card">
-                    <div className="card__img">
-                        <img src={cardimg3} alt=""/>
+                    <div className="card">
+                        <div className="card__img">
+                            <img src={cardimg3} alt=""/>
+                        </div>
+                        <h3>Fully Customizable</h3>
+                        <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
                     </div>
-                    <h3>Fully Customizable</h3>
-                    <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
                 </div>
                 </div>
             </section>
@@ -86,27 +93,33 @@ export default function Page() {
                 <div className="footer__container">
                     <a href="./" className="footer__logo"><img src={logoFooter} alt=""/></a>
                     <div className="footer__links">
-                        <h3>Features</h3>
+                        <div className="links__column">
+                            <h3>Features</h3>
                             <a href="#">Link Shortening</a>
                             <a href="#">Branded Links</a>
                             <a href="#">Analytics</a>
-                        <h3>Resources</h3>
+                        </div>
+                        <div className="links__column">
+                            <h3>Resources</h3>
                             <a href="#">Blog</a>
                             <a href="#">Developers</a>
                             <a href="#">Support</a>
-                        <h3>Company</h3>
+                        </div>
+                        <div className="links__column">
+                            <h3>Company</h3>
                             <a href="#">About</a>
                             <a href="#">Our Team</a>
                             <a href="#">Careers</a>
                             <a href="#">Contact</a>
+                        </div>
                     </div>
-                </div>
                 <div className="footer__social">
                         <a href="#" className="facebook"></a>
                         <a href="#" className="twitter"></a>
                         <a href="#" className="pinterest"></a>
                         <a href="#" className="instagram"></a>
-                    </div>
+                </div>
+                </div>
             </footer>
         </Fragment>
     )

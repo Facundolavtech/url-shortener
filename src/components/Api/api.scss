@@ -29,3 +29,33 @@ form{
         }
     }
 }
+
+@media screen and (min-width: 1024px){
+    form{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        input, .btnShorten{
+            height: 60px;
+        }
+
+        input[type=text]{
+            width: 72%;
+            margin: 0;
+        }
+
+        .btnShorten{
+            width: 20%;
+            margin: auto;
+            cursor: pointer;
+
+            &:hover{
+                color: rgba(245, 245, 245, 0.952);
+                background-color: $CyanHover;
+                transition: background-color .2s, color .2s;
+            }
+        }
+    }
+}
