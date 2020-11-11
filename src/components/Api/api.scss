@@ -17,9 +17,10 @@ form{
         margin-bottom: 15px;
         padding-left: 15px;
         border: 2px solid transparent;
+        color: rgb(61, 61, 61);
 
         &:focus{
-            border: 2px solid $Cyan;
+            border: 2px solid rgb(163, 163, 163);
             transition: border .2s;
         }
 
